@@ -22,6 +22,7 @@ trainer.train([
 ])
 
 print('Welcome, am Nanan your chatbot developed by chatterbot.')
+
 #Getting responses from our chatbot
 while True:
     try:
