@@ -1,4 +1,5 @@
 from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
 
 bot = ChatBot(
     'Nanan', 
@@ -9,6 +10,16 @@ bot = ChatBot(
     ],
     database_uri='sqlite:///database.sqlite3'
     )
+
+#Training our bot
+trainer = ListTrainer(bot)
+trainer.train([
+    'How are you?',
+    'I am good.',
+    'That is good to hear.',
+    'Thank you',
+    'You are welcome',
+])
 
 print('Welcome, am Nanan your chatbot developed by chatterbot.')
 #Getting responses from our chatbot
